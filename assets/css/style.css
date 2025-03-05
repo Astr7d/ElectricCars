@@ -1,0 +1,292 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    'nav'
+    'filtro'
+    'menu'
+    'pie';
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+
+nav{
+    grid-area: nav;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    background-color: black;
+
+}
+
+.navizq{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+i, span{
+    font-size: 25px;
+}
+
+.filtro{
+    grid-area: filtro;
+    background-color: lightsteelblue;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+.filtro-precio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.filtro-precio span{
+    font-size: 15px;
+}
+
+.filtro-precio:hover{
+    background-color: #e0e0e0;
+}
+
+.paginas{
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.paginas a{
+    color: blue;
+    padding: 15px;
+    border-right: 1px solid gray;
+    text-decoration: none;
+}
+
+footer{
+    grid-area: pie;
+    background-color: blue;
+    color: white;
+    font-weight: bold;   
+}
+
+footer div,p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.autos{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.auto{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightblue;
+    margin: 20px;
+    text-align: justify;
+    padding: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.auto h3{
+    text-align: center;
+}
+.auto:nth-child(n+2){
+    display: none;
+}
+
+.auto img {width: 100%;}
+
+.extras{
+    display: none;
+}
+
+
+@media (min-width:576px){
+    body{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-areas:
+        'nav filtro'
+        'nav menu'
+        'pie menu';
+        height: 100vh;
+    }
+
+    .filtro{
+        grid-area: filtro;
+    }
+
+    .filtro-precio{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1300px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: white;
+    }
+
+    nav{
+        grid-area: nav;
+    }
+    .navcompleto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+ 
+    .navizq {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    
+    .barra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        
+    }
+    
+    .autos {
+        grid-area: menu;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+
+    .auto:nth-child(n+2){
+        display: block;
+    }
+
+    i:nth-child(n){
+        display: none;
+    }
+    
+    .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .auto{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        border: 1px solid lightblue;
+        margin: 20px;
+        text-align: justify;
+        padding: 2px;
+        width: 22%;
+    }
+
+    
+
+    .button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        margin: 5px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .boton:hover{
+        background-color: lightblue;
+    }
+    footer{
+        grid-area: pie;
+    }
+
+    .extras{
+        display: block;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    
+}
+    /*
+   
+
+    .auto {
+        width: 30%;
+        margin-bottom: 40px;
+    }
+
+    .filtro {
+        justify-content: center;
+    }
+
+    .filtro-precio {
+        margin-left: 20px;
+    }
+
+    main{
+        grid-area: menu;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .barra{
+        grid-area: filtro;
+        background-color: darkblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-weight: lighter;
+    }
+
+
+*/
