@@ -17,15 +17,14 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    color: white;
-    background-color: black;
-
+    color: beige;
+    background-color:  #51693C;
 }
 
 .navizq{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 i, span{
@@ -34,35 +33,24 @@ i, span{
 
 .filtro{
     grid-area: filtro;
-    background-color: lightsteelblue;
+    background-color: #363E2E;
     padding: 10px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
     font-size: 15px;
+    color: inherit;
 }
 
-.filtro-precio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: white;
+.filtro a{
+    color: wheat;
+    padding: 15px;
+    border-right: 1px solid gray;
+    text-decoration: none;
 }
-
-.filtro-precio span{
-    font-size: 15px;
-}
-
-.filtro-precio:hover{
-    background-color: #e0e0e0;
-}
-
+/*
 .paginas{
     display: flex;
     align-items: center;
@@ -76,13 +64,21 @@ i, span{
     padding: 15px;
     border-right: 1px solid gray;
     text-decoration: none;
-}
+}*/
 
 footer{
     grid-area: pie;
-    background-color: blue;
-    color: white;
+    background-color: #30332E;
+    color: beige;
     font-weight: bold;   
+}
+
+.final a{
+    color: wheat;
+    padding: 15px;
+    border-right: 1px solid gray;
+    text-decoration: none;
+    
 }
 
 footer div,p{
@@ -92,7 +88,7 @@ footer div,p{
     margin-top: 10px;
 }
 
-.autos{
+.cafes{
     grid-area: menu;
     display: flex;
     flex-direction: column;
@@ -101,13 +97,33 @@ footer div,p{
     justify-content: space-around;
 }
 
-.auto{
+.cafe{
     display: flex;
     flex-direction: column;
     border: 1px solid lightblue;
     margin: 20px;
     text-align: justify;
     padding: 20px;
+}
+.filtro2{
+    display: none;
+}
+.cafe{
+    position: relative;
+}
+.zoom img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: backgr
+}
+
+.boton:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer; /* Cambia el cursor al estilo "mano" */
 }
 
 .text {
@@ -119,62 +135,66 @@ footer div,p{
 .boton {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: blue;
+    background-color: #51693C;
     color: white;
     border: none;
     border-radius: 5px;
     margin-bottom: 5px;
 }
 
-.auto h3{
+.cafe h3{
     text-align: center;
 }
-.auto:nth-child(n+2){
-    display: none;
+.cafe img {width: 100%;}
+
+.origen{
+    background-color: moccasin;
+    padding: 10px 50px;
 }
-
-.auto img {width: 100%;}
-
-.extras{
-    display: none;
+.orig img{
+    display: flex;
+    width: 80%;
 }
 
 
 @media (min-width:576px){
     body{
         display: grid;
-        grid-template-columns: 1fr 6fr;
+        grid-template-columns: 1fr 5fr;
         grid-template-areas:
-        'nav filtro'
-        'nav menu'
-        'pie menu';
+        'nav nav'
+        'filtro menu'
+        'pie pie';
         height: 100vh;
     }
 
     .filtro{
         grid-area: filtro;
-    }
-
-    .filtro-precio{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 1300px;
+        background-color: #363E2E;
         padding: 10px;
-        border: 1px solid black;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        font-size: 15px;
+    }
+    
+    .filtro a{
+        color: wheat;
     }
 
     nav{
         grid-area: nav;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: beige;
+        background-color:  #51693C;
     }
     .navcompleto {
         display: flex;
-        flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
     }
  
     .navizq {
@@ -188,11 +208,15 @@ footer div,p{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
-        
+        padding: 10px;   
     }
-    
-    .autos {
+    .icons{
+        display: flex;
+        flex-direction: row;
+        justify-items: center; 
+    }
+
+    .cafes {
         grid-area: menu;
         display: flex;
         flex-wrap: wrap;
@@ -200,37 +224,51 @@ footer div,p{
         flex-direction: row;
     }
 
-    .auto:nth-child(n+2){
+    .cafe:nth-child(n+2){
         display: block;
     }
 
-    i:nth-child(n){
-        display: none;
-    }
-    
     .text {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     
-    .auto{
+    .cafe{
         display: flex;
         flex-direction: column;
         justify-items: center;
-        border: 1px solid lightblue;
-        margin: 20px;
+        border: 1px solid darkgreen;
+        margin: 5px;
         text-align: justify;
-        padding: 2px;
-        width: 22%;
+        padding: 1px;
+        width: 35%;
+        height: 60%;
     }
 
-    
+    .origen{
+        background-color: moccasin;
+        width: 100%;
+        height: 20%;
+        margin: 0;
+        padding: 60px 100px;
+    }
+
+    .orig{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .origen img{
+        height: 500px;
+        margin-right: 50px;
+    }
 
     .button {
         padding: 10px 20px;
         font-size: 16px;
-        background-color: blue;
+        background-color: darkgreen;
         color: white;
         border: none;
         border-radius: 4px;
@@ -240,53 +278,20 @@ footer div,p{
         justify-content: center;
         
     }
-
     .boton:hover{
-        background-color: lightblue;
+        transform: scale(1.1);
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
+
     footer{
         grid-area: pie;
+        padding: 80px;
     }
 
-    .extras{
-        display: block;
-        display: flex;
-        justify-content: flex-end;
+    footer a{
+        color: wheat;
+        text-decoration: none;
+        margin-left: 10px;
     }
-
-    
-}
-    /*
-   
-
-    .auto {
-        width: 30%;
-        margin-bottom: 40px;
-    }
-
-    .filtro {
-        justify-content: center;
-    }
-
-    .filtro-precio {
-        margin-left: 20px;
-    }
-
-    main{
-        grid-area: menu;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .barra{
-        grid-area: filtro;
-        background-color: darkblue;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: white;
-        font-weight: lighter;
-    }
-
-
-*/
+}  

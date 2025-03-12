@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    
-    <title>Autos Elétricos</title>
+
+    <title>Specialty Coffee</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -16,130 +16,107 @@
 <body>
     <nav class="navcompleto">
         <div class="navizq">
-            <span class="mdi mdi-car-electric"></span>
-            <h1>Autos Eléctricos</h1>
+            <i class="fa-solid fa-mug-saucer"></i>
+            <h1>Specialty Coffee</h1>
         </div>
-        <i class="fa-solid fa-bars"></i>
-        <div class="extras">
-            <section class="barra">
-                <p>Inicio</p>
-                <p>Catálogo</p>
-                <p>Ofertas</p>
-                <p>Contactos</p>
-            </section>
+        <div>
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
         </div>
     </nav>
 
     <section class="filtro">
-        <p class="ordenar">Ordenar Por:</p>
-        <div class="filtro-precio">
-            <span>Precio</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </div>
+        <a href="#origen">Quienes Somos</a>
+        <a href="#tipo">Tipos de Cafe</a>
+        <a href="#acc">Accesorios</a>
+        <a href="#contacto">Contactanos</a>
     </section>
 
+    <nav class="filtro2">
+        <div class="filtro22">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <h1>Specialty Coffee</h1>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </nav>
+
     <main>
-        <section class="autos">
-        <!--AUTO 1-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-LONGITUDE-BEV-MY25-433x300-01.jpg" alt="Jeep Avenger">
+        <section class="cafes" id="tipo">
+            <article class="cafe">
+                <img src="./assets/img/Cafe de Origen.jpg" alt="Café de Colombia" class="zoom">
                 <div class="text">
-                    <h3>Jeep® Avenger - 100% Full-Electric</h3>
-                    <p class="card-price">38.000€</p>
+                    <h3>Café de Origen</h3>
                     <button class="boton">Ver más</button>
                 </div>
             </article>
-        
-        <!--AUTO 2-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-ALTITUDE-BEV-MY25-433x300-02.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Longitude- 100% Full-Electric</h3>
-                    <p class="card-price">40.000€</p>
-                    <button class="button">Ver más</button>
+            <article class="cafe">
+                <img src="./assets/img/Screenshot_4.jpg" alt="Café Blend" class="zoom">
+                <div class="text">
+                    <h3>Café Blend</h3>
+                    <button class="boton">Ver más</button>
+                </div>
+            </article>
+            <article class="cafe">
+                <img src="./assets/img/50ef3e97-incapto-aura-negra.png" alt="Café de Colombia" class="Accesorios">
+                <div class="text">
+                    <h3>Accesorios</h3>
+                    <button class="boton">Ver más</button>
+                </div>
+            </article>
+            <article class="cafe" id="acc">
+                <img src="./assets/img/Capsulas-cafe-con-bolsa.jpg.jpeg" alt="Café de Colombia" class="Regalos">
+                <div class="text">
+                    <h3>Café para Regalo</h3>
+                    <button class="boton">Ver más</button>
                 </div>
             </article>
 
-        <!--AUTO 3-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-SUMMIT-BEV-MY25-433x300-03.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Summit - 100% Full-Electric</h3>
-                    <p class="card-price">44.000€</p>
-                    <button class="button">Ver más</button>
+            <section class="origen" id="origen">
+                <h3>Quienes Somos</h3>
+                <div class="orig">
+                    <img src="./assets/img/Origenes.jpg" alt="Origenes">
+                    <div>
+                        <p>Los cafés de una cafetería de especialidad suelen tener sus raíces en fincas cuidadosamente
+                            seleccionadas, donde el cultivo del café se convierte en un arte. Estas fincas, situadas en
+                            regiones como América Latina, África y Asia, dedican un esmero particular a la calidad del
+                            grano, respetando tanto las tradiciones locales como el entorno natural. El proceso comienza con
+                            cosechas manuales de cerezas maduras y continúa con métodos de procesamiento que destacan las
+                            características únicas de cada origen, desde las notas frutales de Etiopía hasta los matices de
+                            chocolate en Colombia.</p>
+    
+                        <p> Cada taza es el resultado de una cadena de trabajo colaborativo: agricultores apasionados,
+                            tostadores expertos y baristas que realzan los sabores en cada extracción. La especialidad no es
+                            solo una cuestión de calidad, sino también de conexión entre el origen del café, quienes lo
+                            cultivan, y los amantes del café que disfrutan cada sorbo. Es un viaje que celebra la diversidad
+                            de su origen y la historia que lleva consigo.</p>
+                    </div>
                 </div>
-            </article>
-
-        <!--AUTO 4-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-ALTITUDE-BEV-MY25-433x300-02.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Longitude- 100% Full-Electric</h3>
-                    <p class="card-price">40.000€</p>
-                    <button class="button">Ver más</button>
-                </div>
-            </article>
-        
-        <!--AUTO 5-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-LONGITUDE-BEV-MY25-433x300-01.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger - 100% Full-Electric</h3>
-                    <p class="card-price">38.000€</p>
-                    <button class="button">Ver más</button>
-                </div>
-            </article>
-
-        <!--AUTO 6-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-SUMMIT-BEV-MY25-433x300-03.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Summit- 100% Full-Electric</h3>
-                    <p class="card-price">44.000€</p>
-                    <button class="button">Ver más</button>
-                </div>
-            </article>
-
-        <!--AUTO 7-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-ALTITUDE-BEV-MY25-433x300-02.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Altitude - 100% Full-Electric</h3>
-                    <p class="card-price">36.000€</p>
-                    <button class="button">Ver más</button>
-                </div>
-            </article>
-
-        <!--AUTO 8-->
-            <article class="auto">
-                <img src="./assets/img/JEEP-AVENGER-LONGITUDE-BEV-MY25-433x300-01.jpg" alt="Jeep Avenger">
-                <div>
-                    <h3>Jeep® Avenger Altitude- 100% Full-Electric</h3>
-                    <p class="card-price">36.000€</p>
-                    <button class="button">Ver más</button>
-                </div>
-            </article>
-
-        <!--PAGINASS DE ABAJO EN  MOBILE-->
-        <div class= "paginas">
-            <a href="#">«</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">»</a>
-        </div> 
-            
+            </section>
         </section>
     </main>
     <footer>
-        <section>
+        <section id="contacto">
             <div>
-                <span class="mdi mdi-facebook"></span>
-                <span class="mdi mdi-instagram"></span>
+                <p>Siguenos en:</p>
+                
+                <a href="https://www.facebook.com/"><span class="mdi mdi-facebook"></span></a>
+                <a href="https://www.instagram.com/"><span class="mdi mdi-instagram"></span></a>
+                
             </div>
-            <p>Todos los derechos reservados</p>
+            <div class="final">
+                <a href="https://incapto.com/jobs/?country=ES">Trabaja con nosotros</a>
+                <a href="https://incapto.com/suscripciones-cafe-en-grano/?country=ES">Suscripciones</a>
+                <a href="https://incapto.com/politica-devoluciones/?country=ES">Envio y devoluciones</a>
+            </div>
+            <p>© 2025 Todos los derechos reservados</p>
         </section>
     </footer>
 
 </body>
+
 </html>
